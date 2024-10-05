@@ -72,6 +72,15 @@ const LineChart = () => {
   const options = {
     responsive: true,
     plugins: {
+      title: {
+        display: true,
+        text: "연도별 온도 이상 현상 추이",
+        align: "center",
+        font: {
+          size: 25,
+        },
+        color: "#ffffff",
+      },
       zoom: {
         pan: {
           enabled: true,

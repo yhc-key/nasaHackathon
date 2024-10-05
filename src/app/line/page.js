@@ -8,7 +8,6 @@ const LineChart = dynamic(() => import("/src/app/line/LineChart.js"), {
 const ChartPage = () => {
   return (
     <div>
-      <h1>Line Chart Example</h1>
       <LineChart />
     </div>
   );
