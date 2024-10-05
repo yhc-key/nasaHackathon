@@ -92,7 +92,7 @@ export default function Map() {
         />
       )}
       <button className="absolute bottom-[1300px] left-[120px] w-12 h-12 bg-[url('/assets/yellowPlace.png')] bg-cover rounded-lg text-white" />
-      <button className="absolute top-[170px] right-[860px] w-12 h-12 bg-[url('/assets/yellowPlace.png')] bg-cover rounded-lg text-white" />
+      <button className="absolute top-[400px] right-[700px] w-12 h-12 bg-[url('/assets/yellowPlace.png')] bg-cover rounded-lg text-white" />
       <button className="absolute bottom-[120px] right-60 w-12 h-12 bg-[url('/assets/bluePlace.png')] bg-cover rounded-lg text-white" />
       <button className="absolute bottom-[120px] left-60 w-12 h-12 bg-[url('/assets/bluePlace.png')] bg-cover rounded-lg text-white" />
       <button
