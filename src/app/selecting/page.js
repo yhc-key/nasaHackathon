@@ -23,7 +23,7 @@ const CitySelection = () => {
     {
       name: "SEOUL",
       image: "/assets/seoul.png",
-      altImage: "/assets/seoul.png",
+      altImage: "/assets/seoul_faded.png",
     },
     {
       name: "BUSAN",
