@@ -13,7 +13,7 @@ import {
 
 const GreenBeltComponent = ({ onBuild, onCancel }) => {
   return (
-    <div className="absolute top-[150px] right-[600px] w-[300px] h-[150px] bg-[#f5e6c4] rounded-xl shadow-lg p-4 text-center">
+    <div className="absolute top-[150px] right-[670px] w-[300px] h-[150px] bg-[#f5e6c4] rounded-xl shadow-lg p-4 text-center">
       <div className="text-lg font-bold text-green-700 mb-2">GREEN BELT</div>
       <div className="text-sm font-semibold mb-4">
         ENERGY +20 &nbsp;&nbsp;&nbsp; MONEY -30
@@ -98,7 +98,7 @@ export default function Map() {
       <button className="absolute bottom-40 left-[100px] w-12 h-12 bg-[url('/assets/grayPlace.png')] bg-cover rounded-lg text-white" />
       <button className="absolute top-80 right-60 w-12 h-12 bg-[url('/assets/greenPlace.png')] bg-cover rounded-lg text-white" />
       <button
-        className="absolute top-[120px] right-[800px] w-12 h-12 bg-cover rounded-lg text-white"
+        className="absolute top-[310px] right-[800px] w-12 h-12 bg-cover rounded-lg text-white"
         style={{ backgroundImage: `url(${buttonImage})` }}
         onClick={handleButtonClick}
       />
@@ -143,7 +143,7 @@ export default function Map() {
               objectFit="contain"
             />
             <button
-              className="absolute bottom-4 right-4 w-16 h-16 text-white bg-transparent border-none cursor-pointer"
+              className="absolute bottom-[27px] right-[225px] w-[30px] h-[30px] text-white bg-transparent border-none cursor-pointer"
               onClick={handleCongratsNext}
             >
               ▶
@@ -165,7 +165,7 @@ export default function Map() {
               objectFit="contain"
             />
             <button
-              className="absolute bottom-4 right-4 w-16 h-16 text-white bg-transparent border-none cursor-pointer"
+              className="absolute bottom-[27px] right-[225px] w-[30px] h-[30px] text-white bg-transparent border-none cursor-pointe"
               onClick={() => setShowThankYouModal(false)}
             >
               ▶
