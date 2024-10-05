@@ -1,3 +1,5 @@
+import Modal from "react-modal";
+
 const NasaMissionModal = (props) => {
   const { offModal } = props;
 
@@ -82,4 +84,17 @@ const Congrats = (props) => {
   );
 };
 
-export { NasaMissionModal, Guide, BonusQuiz, Congrats };
+const ModalComponent = ({ isOpen, onRequestClose, children }) => {
+  return (
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onRequestClose}
+      className="flex justify-center items-center h-full"
+      overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      {children}
+    </Modal>
+  );
+};
+
+export { NasaMissionModal, Guide, BonusQuiz, Congrats, ModalComponent };

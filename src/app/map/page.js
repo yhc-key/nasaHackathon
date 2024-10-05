@@ -2,11 +2,13 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import useStore from "@/app/store/store";
 import {
   NasaMissionModal,
   Guide,
   BonusQuiz,
   Congrats,
+  ModalComponent,
 } from "@/app/utils/Modals";
 
 const GreenBeltComponent = ({ onBuild, onCancel }) => {
@@ -41,6 +43,11 @@ export default function Map() {
 
   const [showComponent, setShowComponent] = useState(false);
   const [buttonImage, setButtonImage] = useState("/assets/greenPlace.png");
+  const [showCongratsModal, setShowCongratsModal] = useState(false);
+  const [showThankYouModal, setShowThankYouModal] = useState(false);
+
+  const money = useStore((state) => state.money);
+  const decreaseMoney = useStore((state) => state.decreaseMoney);
 
   const handleButtonClick = () => {
     if (buttonImage !== "/assets/builtGreenPlace.png") {
@@ -51,10 +58,20 @@ export default function Map() {
   const handleBuildClick = () => {
     setButtonImage("/assets/builtGreenPlace.png");
     setShowComponent(false);
+    decreaseMoney(30);
+    console.log("current money", money);
+    if (money - 100 <= 0) {
+      setShowCongratsModal(true);
+    }
   };
 
   const handleCancelClick = () => {
     setShowComponent(false);
+  };
+
+  const handleCongratsNext = () => {
+    setShowCongratsModal(false);
+    setShowThankYouModal(true);
   };
 
   return (
@@ -113,6 +130,49 @@ export default function Map() {
         className="absolute left-60 bottom-0 w-40 h-20 bg-pink-400 hover:scale-110"
         onClick={() => setModalState(4)}
       />
+      <ModalComponent
+        isOpen={showCongratsModal}
+        onRequestClose={() => setShowCongratsModal(false)}
+      >
+        <div className="w-[85vw] h-[70vh] relative flex items-center justify-center">
+          <div className="relative w-full h-full">
+            <Image
+              src="/assets/congrats.png"
+              alt="Congrats"
+              layout="fill"
+              objectFit="contain"
+            />
+            <button
+              className="absolute bottom-4 right-4 w-16 h-16 text-white bg-transparent border-none cursor-pointer"
+              onClick={handleCongratsNext}
+            >
+              ▶
+            </button>
+          </div>
+        </div>
+      </ModalComponent>
+
+      <ModalComponent
+        isOpen={showThankYouModal}
+        onRequestClose={() => setShowThankYouModal(false)}
+      >
+        <div className="w-[85vw] h-[70vh] relative flex items-center justify-center">
+          <div className="relative w-full h-full">
+            <Image
+              src="/assets/thank_you.png"
+              alt="Thank You"
+              layout="fill"
+              objectFit="contain"
+            />
+            <button
+              className="absolute bottom-4 right-4 w-16 h-16 text-white bg-transparent border-none cursor-pointer"
+              onClick={() => setShowThankYouModal(false)}
+            >
+              ▶
+            </button>
+          </div>
+        </div>
+      </ModalComponent>
 
       {modalState === 1 && (
         <NasaMissionModal offModal={offModal}></NasaMissionModal>
