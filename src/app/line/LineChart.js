@@ -90,9 +90,18 @@ const LineChart = () => {
     },
   };
 
+  const handleResetZoom = () => {
+    if (chartRef.current) {
+      chartRef.current.resetZoom();
+    }
+  };
+
   return (
     <div>
       {chartData && <Line ref={chartRef} data={chartData} options={options} />}
+      <button onClick={handleResetZoom} style={{ marginTop: "10px" }}>
+        Reset Zoom
+      </button>
     </div>
   );
 };
