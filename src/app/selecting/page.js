@@ -50,7 +50,7 @@ const CitySelection = () => {
       <Image
         src={titleImage}
         alt="Select Your City"
-        width={900}
+        width={1100}
         height={300}
         className={styles.titleImage}
       />

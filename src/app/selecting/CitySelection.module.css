@@ -26,8 +26,8 @@
   cursor: pointer;
   transition: transform 0.3s;
 
-  width: 450px;
-  height: 250px;
+  width: 550px;
+  height: 291px;
 }
 
 .cityCard:hover {
