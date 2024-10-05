@@ -5,7 +5,7 @@ export default function Map() {
           <div className="bg-[url('/assets/mainMap.png')] bg-cover bg-center w-screen h-screen">
             <div className="absolute top-10 right-10 bg-slate-300 w-[400px] h-30 rounded-lg opacity-80">
               <div className="m-4 mx-6 text-black text-lg font-bold ">
-                <div className="flex justify-between gap-4">
+                <div classNae="flex justify-between gap-4">
                   <div className="h-8">
                   Energy
                   </div>
