@@ -7,6 +7,9 @@ export default function Home() {
       <Link href="/line">
         <button>Go to line Page</button>
       </Link>
+      <Link href="/selecting">
+        <button>Go to selecting</button>
+      </Link>
     </div>
   );
 }
