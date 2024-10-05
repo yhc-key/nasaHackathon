@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { NasaMissionModal, Guide, BonusQuiz, Congrats } from "@/app/utils/Modals";
+import { NasaMission, Guide, BonusQuiz, Congrats } from "@/app/utils/Modals";
 
 export default function Map() {
   const [modalState, setModalState] = useState(0);
@@ -55,7 +55,7 @@ export default function Map() {
         onClick={() => setModalState(4)}
       />
 
-      {modalState === 1 && <NasaMissionModal offModal={offModal}></NasaMissionModal>}
+      {modalState === 1 && <NasaMission offModal={offModal}></NasaMission>}
       {modalState === 2 && <Guide offModal={offModal}></Guide>}
       {modalState === 3 && <BonusQuiz offModal={offModal}></BonusQuiz>}
       {modalState === 4 && <Congrats offModal={offModal}></Congrats>}
