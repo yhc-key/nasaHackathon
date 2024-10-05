@@ -74,12 +74,12 @@ const LineChart = () => {
     plugins: {
       title: {
         display: true,
-        text: "연도별 온도 이상 현상 추이",
+        text: "Annual Global Temperature Anomaly",
         align: "center",
         font: {
           size: 25,
         },
-        color: "#ffffff",
+        color: "#ffffff", // 제목 색상 설정
       },
       zoom: {
         pan: {
@@ -106,9 +106,22 @@ const LineChart = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{ textAlign: "center", backgroundColor: "#000", padding: "20px" }}
+    >
       {chartData && <Line ref={chartRef} data={chartData} options={options} />}
-      <button onClick={handleResetZoom} style={{ marginTop: "10px" }}>
+      <button
+        onClick={handleResetZoom}
+        style={{
+          marginTop: "20px",
+          padding: "10px 20px",
+          backgroundColor: "#ffffff",
+          color: "#000",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+      >
         Reset Zoom
       </button>
     </div>
