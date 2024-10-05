@@ -50,6 +50,11 @@ export default function Map() {
         onClick={() => setModalState(3)}
       />
 
+      <button
+        className="absolute left-60 bottom-0 w-40 h-20 bg-pink-400 hover:scale-110"
+        onClick={() => setModalState(4)}
+      />
+
       {modalState === 1 && <NasaMissionModal offModal={offModal}></NasaMissionModal>}
       {modalState === 2 && <Guide offModal={offModal}></Guide>}
       {modalState === 3 && <BonusQuiz offModal={offModal}></BonusQuiz>}
