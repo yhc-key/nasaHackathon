@@ -173,13 +173,13 @@ export default function Map() {
             <div className="flex justify-between gap-4">
               <div className="h-8">Energy</div>
               <div className="w-[260px] h-8 bg-slate-200 rounded-xl">
-                <div className={`h-full bg-green-500 rounded-xl`}  style={{ width: `${energy}px` }} />
+                <div className={`h-full bg-green-500 rounded-xl`}  style={{ width: `${energy*2.6}px` }} />
               </div>
             </div>
             <div className="mt-2 flex justify-between gap-4">
               <div className="h-8">Money</div>
               <div className="w-[260px] h-8 bg-slate-200 rounded-xl">
-                <div className={`w-[${money*2.6}px] h-full bg-yellow-500 rounded-xl`} />
+                <div className={`h-full bg-yellow-500 rounded-xl`} style={{ width: `${money*2.6}px` }} />
               </div>
             </div>
           </div>
