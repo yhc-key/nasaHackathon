@@ -1,16 +1,7 @@
-짬푸조 해커톤 시작합니다.
+Our game is designed to raise awareness about the urgent issue of global warming, with a focus on the climate changes happening in South Korea. Please enjoy🍀
 
-총괄, 개발1 : 조용환
-개발2 : 우승빈
-개발3 : 신용화
+## How to start
 
-기획1 : 박보은
-기획2 : 이지수
-기획3 : 서재연
-
-## 구동 방법
-
-
-npm install 후
-npm run dev 
+- npm install 
+- npm run dev 
 
