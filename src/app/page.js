@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div className="bg-customBackGroundColor bg-cover bg-center w-screen h-screen flex justify-center items-center">
-      <Image src='/assets/energyGuardians.png' width="1000" height="1000"  />
+      <Image src={`${process.env.PUBLIC_URL}/energyGuardians.png`} width="1000" height="1000"  />
       {loading ? <div className="absolute bottom-10 right-10 text-white">loading...</div> : <Link href="/globalwarming" className="bg-[url('/assets/playButton.png')] absolute bg-cover w-44 h-20 right-10 bottom-4" /> }
     
     </div>
