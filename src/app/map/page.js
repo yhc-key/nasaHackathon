@@ -50,6 +50,7 @@ export default function Map() {
   const [showThankYouModal, setShowThankYouModal] = useState(false);
 
   const money = useStore((state) => state.money);
+  const energy = useStore((state) => state.energy)
   const isFinish = useStore((state) => state.isFinish)
   const decreaseMoney = useStore((state) => state.decreaseMoney);
   const increaseEnergy = useStore((state) => state.increaseEnergy)
@@ -65,7 +66,6 @@ export default function Map() {
     setShowComponent(false);
     increaseEnergy(20);
     decreaseMoney(30);
-    console.log("current money", money);
   };
 
   const handleCancelClick = () => {
@@ -95,6 +95,7 @@ export default function Map() {
   if (isFinish) {
     return <div className="bg-[url('/assets/bonusQuiz/bonusQuizEnding.png')] bg-cover bg-center w-screen h-screen">
      {showCongrats && <Congrats offModal={offModal} />} 
+
      <ModalComponent
         isOpen={showCongratsModal}
         onRequestClose={() => setShowCongratsModal(false)}
@@ -172,13 +173,13 @@ export default function Map() {
             <div className="flex justify-between gap-4">
               <div className="h-8">Energy</div>
               <div className="w-[260px] h-8 bg-slate-200 rounded-xl">
-                <div className="w-40 h-full bg-green-500 rounded-xl" />
+                <div className={`w-[${energy}px] h-full bg-green-500 rounded-xl`} />
               </div>
             </div>
             <div className="mt-2 flex justify-between gap-4">
               <div className="h-8">Money</div>
               <div className="w-[260px] h-8 bg-slate-200 rounded-xl">
-                <div className="w-40 h-full bg-yellow-500 rounded-xl" />
+                <div className={`w-[${money*2.6}px] h-full bg-yellow-500 rounded-xl`} />
               </div>
             </div>
           </div>
