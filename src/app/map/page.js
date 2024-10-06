@@ -113,16 +113,16 @@ export default function Map() {
       <button className="absolute bottom-[120px] right-60 w-12 h-12 bg-[url('/assets/bluePlace.png')] bg-cover rounded-lg text-white" />
       <button className="absolute bottom-[120px] left-60 w-12 h-12 bg-[url('/assets/bluePlace.png')] bg-cover rounded-lg text-white" />
       <button
-        className="absolute right-20 top-60 w-40 h-40 bg-yellow-400 hover:scale-110"
+        className="absolute right-20 top-60 w-[164px] h-[130px] bg-[url('/assets/nasaMission.png')] bg-cover hover:scale-110"
         onClick={() => setModalState(1)}
       />
       <button
-        className="absolute right-20 bottom-40 w-40 h-20 bg-green-400 hover:scale-110"
+        className="absolute right-20 bottom-40 w-[164px] h-20 bg-[url('/assets/guide.png')] bg-cover hover:scale-110"
         onClick={() => setModalState(2)}
       />
-      <button className="absolute left-20 top-60 w-40 h-20 bg-gray-500 hover:scale-110" />
+      <button className="absolute left-20 top-60 w-[164px] h-20 bg-[url('/assets/build.png')] bg-cover hover:scale-110" />
       <button
-        className="absolute left-20 bottom-40 w-40 h-40 bg-blue-500 hover:scale-110"
+        className="absolute left-20 bottom-40 w-[164px] h-[130px] bg-[url('/assets/bonusQuiz.png')] bg-cover hover:scale-110"
         onClick={() => setModalState(3)}
       />
 
