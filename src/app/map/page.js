@@ -61,9 +61,6 @@ export default function Map() {
     setShowComponent(false);
     decreaseMoney(30);
     console.log("current money", money);
-    if (money - 100 <= 0) {
-      setShowCongratsModal(true);
-    }
   };
 
   const handleCancelClick = () => {
