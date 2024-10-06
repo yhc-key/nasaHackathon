@@ -85,6 +85,7 @@ export default function Map() {
   useEffect(() => {
     if (isFinish) {
       const timer = setTimeout(() => {
+        setShowCongratsModal(true); // 2.5초 후에 Congrats 표시
         setShowCongrats(true); // 2.5초 후에 Congrats 표시
       }, 2500);
       
@@ -94,7 +95,6 @@ export default function Map() {
 
   if (isFinish) {
     return <div className="bg-[url('/assets/bonusQuiz/bonusQuizEnding.png')] bg-cover bg-center w-screen h-screen">
-     {showCongrats && <Congrats offModal={offModal} />} 
 
      <ModalComponent
         isOpen={showCongratsModal}
@@ -173,7 +173,7 @@ export default function Map() {
             <div className="flex justify-between gap-4">
               <div className="h-8">Energy</div>
               <div className="w-[260px] h-8 bg-slate-200 rounded-xl">
-                <div className={`w-[${energy}px] h-full bg-green-500 rounded-xl`} />
+                <div className={`h-full bg-green-500 rounded-xl`}  style={{ width: `${energy}px` }} />
               </div>
             </div>
             <div className="mt-2 flex justify-between gap-4">
