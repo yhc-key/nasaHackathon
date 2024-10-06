@@ -109,7 +109,7 @@ export default function Map() {
               objectFit="contain"
             />
             <button
-              className="absolute bottom-[27px] right-[225px] w-[30px] h-[30px] text-white bg-transparent border-none cursor-pointer"
+              className="absolute bottom-[27px] right-[225px] w-[30px] h-[30px] text-transparent bg-transparent border-none cursor-pointer"
               onClick={handleCongratsNext}
             >
               ▶
@@ -215,11 +215,6 @@ export default function Map() {
       <button
         className="absolute left-20 bottom-40 w-[164px] h-[130px] bg-[url('/assets/bonusQuiz.png')] bg-cover hover:scale-110"
         onClick={() => setModalState(3)}
-      />
-
-      <button
-        className="absolute left-60 bottom-0 w-40 h-20 bg-pink-400 hover:scale-110"
-        onClick={() => setModalState(4)}
       />
 
       {modalState === 1 && <NasaMission offModal={offModal}></NasaMission>}
