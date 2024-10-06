@@ -44,6 +44,7 @@ export default function Map() {
   const [showComponent, setShowComponent] = useState(false);
   const [buttonImage, setButtonImage] = useState("/assets/greenPlace.png");
   const [showCongratsModal, setShowCongratsModal] = useState(false);
+  const [showCongratsTextModal, setShowCongratsTextModal] = useState(false);
   const [showThankYouModal, setShowThankYouModal] = useState(false);
 
   const money = useStore((state) => state.money);
@@ -71,6 +72,11 @@ export default function Map() {
 
   const handleCongratsNext = () => {
     setShowCongratsModal(false);
+    setShowCongratsTextModal(true);
+  };
+
+  const handleCongratsTextNext = () => {
+    setShowCongratsTextModal(false);
     setShowThankYouModal(true);
   };
 
@@ -145,6 +151,28 @@ export default function Map() {
             <button
               className="absolute bottom-[27px] right-[225px] w-[30px] h-[30px] text-white bg-transparent border-none cursor-pointer"
               onClick={handleCongratsNext}
+            >
+              ▶
+            </button>
+          </div>
+        </div>
+      </ModalComponent>
+
+      <ModalComponent
+        isOpen={showCongratsTextModal}
+        onRequestClose={() => setShowCongratsTextModal(false)}
+      >
+        <div className="w-[85vw] h-[70vh] relative flex items-center justify-center">
+          <div className="relative w-full h-full">
+            <Image
+              src="/assets/congratsText.png"
+              alt="Congrats"
+              layout="fill"
+              objectFit="contain"
+            />
+            <button
+              className="absolute bottom-[27px] right-[225px] w-[30px] h-[30px] text-white bg-transparent border-none cursor-pointer"
+              onClick={handleCongratsTextNext}
             >
               ▶
             </button>
