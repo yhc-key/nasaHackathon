@@ -109,7 +109,7 @@ export default function Map() {
               objectFit="contain"
             />
             <button
-              className="absolute bottom-[27px] right-[225px] w-[30px] h-[30px] text-transparent bg-transparent border-none cursor-pointer"
+              className="absolute bottom-[27px] right-[225px] w-[40px] h-[40px] text-transparent bg-transparent border-none cursor-pointer"
               onClick={handleCongratsNext}
             >
               ▶
@@ -131,7 +131,7 @@ export default function Map() {
               objectFit="contain"
             />
             <button
-              className="absolute bottom-[27px] right-[225px] w-[30px] h-[30px] text-transparent bg-transparent border-none cursor-pointer"
+              className="absolute bottom-[27px] right-[225px] w-[40px] h-[40px] text-transparent bg-transparent border-none cursor-pointer"
               onClick={handleCongratsTextNext}
             >
               ▶
@@ -153,7 +153,7 @@ export default function Map() {
               objectFit="contain"
             />
             <button
-              className="absolute bottom-[27px] right-[225px] w-[30px] h-[30px] text-transparent bg-transparent border-none cursor-pointe"
+              className="absolute bottom-[27px] right-[225px] w-[40px] h-[40px] text-transparent bg-transparent border-none cursor-pointe"
               onClick={() => setShowThankYouModal(false)}
             >
               ▶
