@@ -10,7 +10,7 @@ const useStore = create((set) => ({
     set((state) => ({ energy: state.energy + amount })),
   decreaseEnergy: (amount) =>
     set((state) => ({ energy: state.energy - amount })),
-  toggleisFinish : () => set((state) => ({ isFinish: !state.finsh  }))
+  toggleIsFinish : () => set((state) => ({ isFinish: !state.isFinsh  }))
 }));
 
 export default useStore;

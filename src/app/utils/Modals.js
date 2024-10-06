@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import Question1Component from "./Question1Component";
 import Question2Component from "./Question2Component";
-import { useRouter } from "next/navigation";
+import useStore from "@/app/store/store";
 
 const NasaMissionModal = (props) => {
   const { offModal } = props;
+
+
+
 
   return (
     <div
@@ -49,8 +52,8 @@ const Guide = (props) => {
 
 const BonusQuiz = (props) => {
   const { offModal } = props;
-  const router = useRouter();
   const [quizStep, setQuizStep] = useState(1)
+  const toggleIsFinish = useStore((state) => state.toggleIsFinish)
 
   const handlebeforeStep = () => {
     setQuizStep(prev => prev -1)
@@ -60,11 +63,10 @@ const BonusQuiz = (props) => {
     setQuizStep(prev => prev +1)
   }
 
-  // useEffect(() => {
-  //   if (quizStep === 7) {
-  //     router.push()
-  //   }
-  // }, [quizStep])
+  const handleCloseFinishClick = () => {
+    toggleIsFinish()
+    offModal();
+  };
 
   return (
     <div
@@ -84,7 +86,7 @@ const BonusQuiz = (props) => {
           <div className="w-full h-full bg-blue-500 rounded-lg flex-row justify-center items-center" >
             <div className="h-30 flex justify-center relative">
           <Image src={`/assets/bonusQuiz/bonusQuizSub.png`} width="400" height="200" className="my-8" />
-          <button className="absolute w-10 h-10 right-4 top-4 bg-[url('/assets/bonusQuiz/closeButton.png')] bg-cover" onClick={offModal} />
+          <button className="absolute w-10 h-10 right-4 top-4 bg-[url('/assets/bonusQuiz/closeButton.png')] bg-cover" onClick={handleCloseFinishClick} />
 
             </div>
             <div className="flex justify-center">
