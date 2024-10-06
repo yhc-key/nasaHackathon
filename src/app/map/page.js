@@ -41,6 +41,7 @@ export default function Map() {
 
   const offModal = () => setModalState(0);
 
+  const [finishBonusQuiz, setFinishBonusQuiz] = useState(false)
   const [showComponent, setShowComponent] = useState(false);
   const [buttonImage, setButtonImage] = useState("/assets/greenPlace.png");
   const [showCongratsModal, setShowCongratsModal] = useState(false);
@@ -76,6 +77,11 @@ export default function Map() {
     setShowCongratsTextModal(false);
     setShowThankYouModal(true);
   };
+
+  if (finishBonusQuiz) {
+    return <div className="bg-[url('/assets/bonusQuiz/bonusQuizEnding.png')] bg-cover bg-center w-screen h-screen"></div>
+  }
+  
 
   return (
     <>

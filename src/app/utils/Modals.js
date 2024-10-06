@@ -91,7 +91,7 @@ const BonusQuiz = (props) => {
           {quizStep <5 && <Image src={`/assets/bonusQuiz/bonusQuizModal-${quizStep}.png`} width="1000" height="800" className="my-8" /> }
           {quizStep === 5 && <Question1Component />}
           {quizStep === 6 && <Question2Component />}
-          {quizStep >= 7 && <Image src={`/assets/bonusQuiz/bonusQuizModal-${quizStep}.png`} width="1000" height="800" className="my-8" /> }
+          {quizStep === 7 && <Image src={`/assets/bonusQuiz/bonusQuizModal-${quizStep}.png`} width="1000" height="800" className="my-8" /> }
             </div>
 
 
