@@ -50,6 +50,7 @@ export default function Map() {
 
   const money = useStore((state) => state.money);
   const decreaseMoney = useStore((state) => state.decreaseMoney);
+  const increaseEnergy = useStore((state) => state.increaseEnergyy)
 
   const handleButtonClick = () => {
     if (buttonImage !== "/assets/builtGreenPlace.png") {
@@ -60,6 +61,7 @@ export default function Map() {
   const handleBuildClick = () => {
     setButtonImage("/assets/builtGreenPlace.png");
     setShowComponent(false);
+    increaseEnergy(20);
     decreaseMoney(30);
     console.log("current money", money);
   };
